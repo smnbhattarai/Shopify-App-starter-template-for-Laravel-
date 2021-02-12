@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('dashboard');
+})->middleware(['auth.shopify'])->name('home');
+
+Route::view('/customers', 'customers');
+Route::view('/products', 'products');
+Route::view('/settings', 'settings');
