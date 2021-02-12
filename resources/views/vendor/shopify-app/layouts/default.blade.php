@@ -36,6 +36,7 @@
             @include('shopify-app::partials.flash_messages')
         @endif
 
+        <script src="{{ mix('js/app.js') }}"></script>
         @yield('scripts')
     </body>
 </html>
