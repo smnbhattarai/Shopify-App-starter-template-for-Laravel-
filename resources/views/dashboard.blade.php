@@ -2,7 +2,18 @@
 
 @section('content')
 
-    <h3>Dashboard</h3>
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div id="wrapper" class="container px-4 py-4 mx-auto">
+            <div class="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
+
+                <x-status type="positive" title="Today's data" number="12" growth="8" />
+                <x-status type="negative" title="Yesterday's data" number="24" growth="16" />
+                <x-status type="normal" title="Total data" number="48" growth="0" />
+
+            </div>
+        </div>
+    </div>
+
 
 @endsection
 
