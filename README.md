@@ -6,3 +6,5 @@
 4. Generate app key `php artisan key:generate`
 5. Run migration `php artisan migrate`
 6. Add Shopify credentials to `.env`
+7. Run `npm install`
+8. Build assets by running `npm run prod`
