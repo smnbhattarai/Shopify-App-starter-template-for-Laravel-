@@ -7,6 +7,7 @@
         <title>{{ \Osiset\ShopifyApp\getShopifyConfig('app_name') }}</title>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script src="https://unpkg.com/turbolinks"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
         @yield('styles')
     </head>
 

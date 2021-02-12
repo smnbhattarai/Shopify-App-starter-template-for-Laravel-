@@ -12,6 +12,8 @@
                            class="@if(Request::path() == 'customers')bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Customers</a>
                         <a href="/settings"
                            class="@if(Request::path() == 'settings')bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Settings</a>
+                        <a href="/test"
+                           class="@if(Request::path() == 'test')bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Test</a>
                     </div>
                 </div>
             </div>
