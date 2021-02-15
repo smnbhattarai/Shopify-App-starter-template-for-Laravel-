@@ -13,9 +13,12 @@
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "node-sass": "^5.0.0",
+        "postcss": "^8.1.14",
+        "sass-loader": "^11.0.1"
     },
     "dependencies": {
+        "noty": "^3.2.0-beta",
         "tailwindcss": "^2.0.3"
     }
 }

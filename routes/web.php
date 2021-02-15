@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\SettingController;
+use App\Models\Setting;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth.shopify'])->group(function () {
     Route::get('/', function () {
-        return view('dashboard');
+        $shop = Auth::user();
+        $settings = Setting::where('shop_id', $shop->name)->first();
+        return view('dashboard', compact('settings'));
     })->name('home');
 
     Route::view('/customers', 'customers');
