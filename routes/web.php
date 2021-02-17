@@ -29,37 +29,6 @@ Route::middleware(['auth.shopify'])->group(function () {
 
     Route::post('configure-theme', [SettingController::class, 'configureTheme']);
 
-    Route::get('/test', function () {
-        $shop = Auth::user();
-        $shopWishlists = \App\Models\Wishlist::where('shop_id', $shop->name)->orderBy('updated_at', 'desc')->get();
-        $lists = [];
-        foreach ($shopWishlists as $item) {
-            array_push($lists, "gid://shopify/Product/{$item->product_id}");
-        }
-
-        $l = json_encode($lists);
-
-        $query = "
-        {
-          nodes(ids: $l) {
-            ... on Product {
-              id
-              title
-              handle
-              createdAt
-              priceRange {
-                maxVariantPrice {
-                  amount
-                }
-              }
-            }
-          }
-        }
-        ";
-
-        $products = $shop->api()->graph($query);
-        return $products;
-
-    });
+    Route::get('/wishlists', [\App\Http\Controllers\WishlistController::class, 'index'])->name('wishlists');
 
 });

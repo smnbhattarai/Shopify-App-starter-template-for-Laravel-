@@ -16,7 +16,9 @@
             <div class="app-content">
                 <main role="main">
                     @include('partials.navbar')
-                    @yield('content')
+                    <div class="container">
+                        @yield('content')
+                    </div>
                 </main>
             </div>
         </div>
